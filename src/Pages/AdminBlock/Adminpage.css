@@ -1,0 +1,83 @@
+.logo{
+    height: 20px;
+    width:cover
+}
+/* LineChart.css */
+.chart-container {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+.userbg{
+    padding: 35px;
+    text-align: center;
+}  
+.userbg>h1{
+    font-family: "Roboto";
+    margin-bottom: 20px;
+}
+.table{
+    border-style: solid;
+    border-color: black;
+    padding: 15px;
+}  
+.adduserbtn{
+    position: absolute;
+    top:12%;
+    right:50px;
+    left:auto;
+    border-width: 0px;
+    background-color:forestgreen;
+    color: white;
+    height: 35px;
+    width: auto;
+    /* padding: 4px; */
+    border-radius: 8px;
+}
+.blur-background {
+    filter: blur(10px); 
+  }
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: start;
+    border-radius: 10px;
+  }  
+  .inputradio{
+    margin-left: 30px;
+    margin-right: 3px;
+  }
+  .closeicon{
+    color:black;
+    position:relative;
+    left:97%;
+    background-color: darkgray;
+    cursor: pointer;
+  }
+  .editiconicon{
+    margin:10px;
+    
+  }
+  .editiconicon:hover{
+    
+    cursor:pointer;
+    color:green;
+
+  }
+  
+  
+  .delicon:hover{
+    cursor:pointer;
+    color: red;
+  }
+  .chart-container {
+    height: 400px; 
+    width: 600px; 
+  }
+  
+  

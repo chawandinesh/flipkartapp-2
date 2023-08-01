@@ -1,0 +1,39 @@
+
+[
+    {
+        "id":"1",
+        "url":"https://rukminim1.flixcart.com/image/300/300/xif0q/mobile/z/x/x/-original-imagp55frhhddu6n.jpeg?q=90",
+        "Name":"Realme C55",
+        "Price1":"13,999",
+        "Price":11999,
+        "Desc":"6 GB RAM | 64 GB ROM | Expandable Upto 1 TB 17.07 cm (6.72 inch) Full HD+ Display 64MP + 2MP | 8MP Front Camera",
+        "Offer1": "Bank Offer5% Cashback on Flipkart Axis Bank Card",
+        "Offer2":"Special PriceGet extra ₹2000 off (price inclusive of cashback/coupon)",
+        "Offer3":"Partner OfferSign up for Flipkart Pay Later and get Flipkart Gift Card worth up to ₹500*",
+        "Offer4":"Partner OfferPurchase now & get 1 surprise cashback coupon in Future"
+    },
+    {
+        "id":"2",
+        "url":"https://rukminim1.flixcart.com/image/300/300/xif0q/mobile/k/u/n/-original-imagzjhwtfthcmzz.jpeg?q=90",
+        "Name":"Vivo T2x 5G",
+        "Price":12999,
+        "Desc":"4 GB RAM | 128 GB ROM 16.71 cm (6.58 inch) Full HD+ Display 50MP + 2MP | 8MP Front Camera",
+        "Offer1": "Bank Offer 10% off on Citi Credit Card EMI Transactions, up to ₹1,500 on orders of ₹5,000 and above",
+        "Offer2":"Bank Offer Extra Rs1,000 off on Citi Credit Card EMI Transactions on a Net Cart Value of Rs29,999 and above",
+        "Offer3":"Bank Offer 5% Cashback on Flipkart Axis Bank Card",
+        "Offer4":"Special Price Get extra ₹5000 off (price inclusive of cashback/coupon)"
+    },
+    {
+        "id":"3",
+        "url":"https://rukminim1.flixcart.com/image/300/300/ktketu80/mobile/6/n/d/iphone-13-mlpg3hn-a-apple-original-imag6vpyghayhhrh.jpeg?q=90",
+        "Name":"APPLE iPhone 13",
+        "Price":61999,
+        "Desc":"128 GB ROM 15.49 cm (6.1 inch) Super Retina XDR Display 12MP + 12MP | 12MP Front Camera",
+        "Offer1": "Bank Offer5% Cashback on Flipkart Axis Bank Card",
+        "Offer2":"Bank Offer₹2000 Off On HDFC Bank Debit Card EMI Transactions",
+        "Offer3":"Bank Offer₹2000 Off On HDFC Bank Credit Card Transactions",
+        "Offer4":"Special PriceGet extra ₹7901 off (price inclusive of cashback/coupon)"
+    }
+    
+
+]
