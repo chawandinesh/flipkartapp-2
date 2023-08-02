@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "types": ["faker"],
-    "target": "ESNext",
+    "target": "es6",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "skipLibCheck": true,
     "allowJs": true,
+    "typeRoots": ["./src", "./node_modules/@types"],
     
 
     /* Bundler mode */
@@ -15,7 +16,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
+    "esModuleInterop": true,
+    
+   
+   
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

@@ -544,6 +544,11 @@
 .radioclass {
   margin-right: 50px;
 }
+.inputradio{
+  margin-right: 30px !important;
+  margin-left: 5px;
+  margin-top: 25px !important;
+}
 .nameinputel {
   width: 300px;
   border-radius: 3px;
@@ -579,6 +584,7 @@
 }
 .userdetails {
   display: flex;
+  flex-wrap: wrap;
 }
 .cityel {
   width: 300px;
@@ -633,7 +639,7 @@
   
 }
 
-/* .profile-pic-section {
+.profile-pic-section {
   text-align: center;
 }
 
@@ -664,7 +670,7 @@
 
 #profile-pic-input {
   display: none;
-} */
+}
 
 
 /*Orders page */

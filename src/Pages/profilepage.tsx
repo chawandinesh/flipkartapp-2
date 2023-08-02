@@ -5,6 +5,11 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Footer from "../Components/Footer";
 import Config from "../Components/Config";
+import { Container, Row, Col, Image, Form, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import firebase from 'firebase/app';
+import   'firebase/storage';
+
 
 const schema = yup.object({
   name: yup
@@ -30,6 +35,9 @@ const Profilepage = () => {
   const [editMode, setEditMode] = useState(false);
 
   const [userDetails, setUserdetails] = useState<any>({});
+
+  const [imageURL, setImageURL] = useState('');
+  const [selectedFile, setSelectedFile] = useState<any>(null);
 
   const getUsers = async () => {
     try {
@@ -89,18 +97,40 @@ const Profilepage = () => {
 
   const handleimgfile = (e: any) => {
     const file = e.target.files[0];
-    if (file) {
-      const reader = new window.FileReader();
-      reader.onload = async () => {
-        const fileDataURL = reader.result;
+    setSelectedFile(file);
+    
+    // if (file) {
+    //   const reader = new window.FileReader();
+    //   reader.onload = async () => {
+    //     const url = URL.createObjectURL(file)
+    //     console.log("imgurl", url)
+        
+    //     const img = {
+    //       imgurl: url,
+    //     };
 
-        const img = {
-          imgurl: fileDataURL,
-        };
+    //     patchdata({ ...img });
+    //   };
+    //   reader.readAsDataURL(file);
+    // }
+  };
+  const handleUpload = async () => {
+    if (selectedFile) {
+      const storageRef = firebase.
+      const fileRef = storageRef.child(selectedFile.name);
 
-        patchdata({ ...img });
-      };
-      reader.readAsDataURL(file);
+      try {
+        // Upload the file to Firebase Storage
+        await fileRef.put(selectedFile);
+
+        // Get the download URL of the uploaded file
+        const downloadURL = await fileRef.getDownloadURL();
+        setImageURL(downloadURL);
+
+        console.log('File uploaded successfully:', downloadURL);
+      } catch (error) {
+        console.error('Error uploading file:', error);
+      }
     }
   };
 
@@ -117,12 +147,13 @@ const Profilepage = () => {
   }, [userDetails]);
 
   return (
-    <div className="profilepage">
+    <Container className="profilepage">
       {userDetails ? (
-        <>
+        <Row>
+          
           <h2 className="profiletitle">Hello, {userDetails.name}!</h2>
-          <div className="profilepic_card">
-            <div className="profileimg">
+          <div className="profilepic_card ">
+            <div className="profileimg col-xs-5">
               {userDetails && (
                 <img
                   className="profileimg"
@@ -131,17 +162,19 @@ const Profilepage = () => {
                 />
               )}
               {!editMode ? null : (
+                <>
                 <input
                   type="file"
                   name="imgurl"
                   accept="image/*"
                   onChange={handleimgfile}
                 />
+                <button onClick={handleUpload}>upload</button></>
               )}
             </div>
 
-            <div className="profiledetails_card">
-              <form className="formclass" onSubmit={handleSubmit(onSubmit)}>
+            <div >
+              <form className="formclass " onSubmit={handleSubmit(onSubmit)}>
                 {editMode ? (
                   <input type="submit" className="savebtn" />
                 ) : (
@@ -149,10 +182,11 @@ const Profilepage = () => {
                     Edit
                   </button>
                 )}
+                
 
                 <h4>UserId: {userDetails.id} </h4>
 
-                <div className="userdetails">
+                <div className="userdetails col-xs-7">
                   <div className="userdetailscontainer1">
                     <label>Full Name:</label>
                     <input
@@ -274,12 +308,13 @@ const Profilepage = () => {
               </form>
             </div>
           </div>
-        </>
+          
+        </Row>
       ) : (
         <p>Loading...</p>
       )}
       <Footer/>
-    </div>
+    </Container>
   );
 };
 

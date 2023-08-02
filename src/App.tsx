@@ -12,6 +12,7 @@ import totaldata from "./assets/TotalData.json";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AppRoutes from "./Routes/AppRoutes";
+import "firebase/storage";
 
 function App() {
   const [search, setsearch] = useState<any>("");
@@ -20,6 +21,7 @@ function App() {
     isloggedin: false,
     user: {},
   });
+
   return (
     <div>
       <categoryContext.Provider value={categorydata}>
@@ -30,7 +32,7 @@ function App() {
                 value={{ userdetails, setuserdetails }}
               >
                 <AppRoutes />
-                <ToastContainer position="top-center" autoClose={2000}/>
+                <ToastContainer position="top-center" autoClose={2000} />
               </signinuserdetailsContex.Provider>
             </cartContext.Provider>
           </searchcontext.Provider>
